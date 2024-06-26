@@ -10,7 +10,7 @@ import userRoutes from '../backend/routes/userRoutes.js'
 import {app, server} from './socket/socket.js'
 
 dotenv.config();
-const port = 3000 || process.env.PORT;
+const port =  process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cookieParser());
@@ -30,5 +30,5 @@ app.use('/api/users',userRoutes)
 
 server.listen(port,()=>{
     connectToMongoDB();
-    console.log(`server is running on port http://localhost:${port}`)
+    console.log(`server is running on port https://chatkaro-3.onrender.com`)
 })

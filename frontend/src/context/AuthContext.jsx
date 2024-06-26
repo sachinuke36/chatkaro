@@ -7,7 +7,7 @@ export const useAuthContext = ()=> useContext(AuthContext);
 
 export const AuthContextProvider = ({children})=>{
     const [authUser, setAuthUser] = useState(JSON.parse(localStorage.getItem("chat-user")) || null);
-    const url = "http://localhost:3000/"
+    const url = "https://chatkaro-3.onrender.com/"
     return <AuthContext.Provider value={{authUser,setAuthUser, url}}>
             {children}
     </AuthContext.Provider>

@@ -11,6 +11,7 @@ const useGetConversations = () => {
     const getConversations = async ()=>{
       setLoading(true);
       try {
+        console.log(url)
         const res = await fetch(url+'api/users',{
           method:"GET",
           headers:{"Content-Type":"application/json"},
