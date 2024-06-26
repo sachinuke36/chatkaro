@@ -10,7 +10,7 @@ import userRoutes from '../backend/routes/userRoutes.js'
 import {app, server} from './socket/socket.js'
 
 dotenv.config();
-const port = 3000;
+const port = 3000 || process.env.PORT;
 
 app.use(express.json());
 app.use(cookieParser());
